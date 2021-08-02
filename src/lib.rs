@@ -575,3 +575,8 @@ extern {
     pub fn Cudd_bddIsVarToBeUngrouped(dd: *mut DdManager, index: c_int) -> c_int;
     pub fn Cudd_bddIsVarHardGroup(dd: *mut DdManager, index: c_int) -> c_int;
 }
+
+#[test]
+fn test_basic() {
+    let mgr = unsafe { Cudd_Init(0,0,CUDD_UNIQUE_SLOTS,CUDD_CACHE_SLOTS,0) };
+}
